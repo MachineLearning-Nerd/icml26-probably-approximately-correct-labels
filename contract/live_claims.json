@@ -1,0 +1,22 @@
+[
+  {
+    "text": "The method constructs proxy labels \u1ef8\u1d62 = Y\u1d62\u00b7\ud835\udfd9{U\u1d62\u2265\u00fb} + \u0176\u1d62\u00b7\ud835\udfd9{U\u1d62<\u00fb} by collecting expert labels only where model uncertainty U\u1d62 exceeds a calibrated threshold \u00fb, guaranteeing average labeling error \u2264 \u03b5 with probability \u2265 1-\u03b1 (Theorem 2.1).",
+    "status": "unverified"
+  },
+  {
+    "text": "Uncertainty calibration is performed via a multicalibration algorithm that adjusts per-example uncertainty estimates across feature/demographic subgroups (Section 2.1).",
+    "status": "unverified"
+  },
+  {
+    "text": "A PAC router extends the method to route among k candidate models using a learned weighting function w_\u03b8 optimized via implicit gradients with a sigmoid relaxation for differentiability (Section 3).",
+    "status": "unverified"
+  },
+  {
+    "text": "At an error tolerance of \u03b5=0.05, the single-model method yields 14-28% expert-labeling budget savings on text tasks with GPT-4o, 39-60% savings on image tasks with ResNet-152, and 16-51% savings on continuous-label tasks.",
+    "status": "unverified"
+  },
+  {
+    "text": "Multi-model routing between GPT-4o and Claude 3.7 yields 42% budget savings, and up to 482% relative cost savings in a cost-sensitive setting incorporating per-source and expert labeling costs.",
+    "status": "unverified"
+  }
+]

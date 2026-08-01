@@ -1,0 +1,21 @@
+{
+  "i": 19651,
+  "pid": "63255",
+  "orid": "Yhv4d8wfbi",
+  "title": "Probably Approximately Correct Labels",
+  "authors": [
+    "Emmanuel Candes",
+    "Andrew Ilyas",
+    "Tijana Zrnic"
+  ],
+  "insts": [],
+  "area": "Theory",
+  "sub": "Probabilistic Methods",
+  "type": "Poster",
+  "spot": false,
+  "or": "https://openreview.net/forum?id=Yhv4d8wfbi",
+  "vs": "https://icml.cc/virtual/2026/poster/63255",
+  "arxiv": "2506.10908",
+  "alphaxiv": "2506.10908",
+  "hf": ""
+}
