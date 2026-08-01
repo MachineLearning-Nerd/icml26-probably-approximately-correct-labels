@@ -7,7 +7,7 @@ Contract manifest: contract/contract_manifest.json
 Source paper/version: arXiv:2506.10908
 Official code/data/model pins: no executable author release in source archive; source/PDF pinned in evidence/source
 Compute policy: local CPU/local GPU only; no HF cpu-upgrade, Jobs, paid, or remote compute
-GitHub repository: pending creation
+GitHub repository: https://github.com/MachineLearning-Nerd/icml26-repro-Yhv4d8wfbi-probably-approximately-correct-labels
 Current phase: claim_1_protocol_ready
 Per-claim state: C1 protocol ready; C2-C5 unstarted
 Publication status: not published
