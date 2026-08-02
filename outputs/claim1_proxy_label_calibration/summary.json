@@ -1,0 +1,7 @@
+{
+  "all_calibrated_pass": true,
+  "all_under_controls_fail": true,
+  "mean_calibrated_loss": 0.011924,
+  "mean_under_calibrated_loss": 0.090008,
+  "scope": "clean-room finite synthetic binary proxy-label experiment; not a proof of Theorem 2.1"
+}

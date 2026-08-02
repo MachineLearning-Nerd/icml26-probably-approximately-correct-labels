@@ -1,0 +1,15 @@
+{
+  "alpha": 0.05,
+  "control": "threshold increased by 0.70, routing fewer examples to expert",
+  "epsilon": 0.05,
+  "method": "held-out Hoeffding-UCB calibrated proxy labels",
+  "n_calibration": 5000,
+  "n_population": 50000,
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ]
+}

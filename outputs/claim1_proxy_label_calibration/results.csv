@@ -1,0 +1,6 @@
+seed,n_calibration,n_population,epsilon,alpha,threshold,calibrated_loss,calibrated_expert_fraction,under_calibrated_threshold,under_calibrated_loss,under_calibrated_expert_fraction,calibrated_passes_population_epsilon,under_calibrated_fails_population_epsilon
+101,5000,50000,0.05,0.05,0.4383712788896671,0.01064,0.56438,1.0,0.09168,0.0,True,True
+202,5000,50000,0.05,0.05,0.48177585970919357,0.01424,0.51468,1.0,0.08646,0.0,True,True
+303,5000,50000,0.05,0.05,0.5074867795310657,0.01464,0.49434,1.0,0.08932,0.0,True,True
+404,5000,50000,0.05,0.05,0.4641734625816759,0.0132,0.53048,1.0,0.0929,0.0,True,True
+505,5000,50000,0.05,0.05,0.340062869087864,0.0069,0.65962,1.0,0.08968,0.0,True,True

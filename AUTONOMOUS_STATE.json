@@ -1,26 +1,37 @@
 {
   "schema_version": 1,
   "openreview_id": "Yhv4d8wfbi",
-  "phase": "claim_1_protocol_ready",
-  "next_action": "launch_claim_1_direct_local_proxy_label_reproduction",
+  "phase": "claim_1_attempt_1_local_proxy_label_toy_complete",
+  "next_action": "independent_claim_1_toy_review_then_claim_2",
   "active_run_ids": [],
   "completed_milestones": [
     "live_duplicate_gate",
     "live_contract_saved",
     "source_archive_and_pdf_pinned",
-    "claim_1_source_cpu_feasibility_audit"
+    "claim_1_source_cpu_feasibility_audit",
+    "claim_1_attempt_1_calibrated_proxy_label_local_toy"
   ],
   "failed_attempts": [],
   "claim_attempt_counts": {
-    "1": 0,
+    "1": 1,
     "2": 0,
     "3": 0,
     "4": 0,
     "5": 0
   },
-  "last_checkpoint": "2026-08-01T22:30:37Z",
-  "last_known_git_commit": "e40222ee24308cef11b8bf2e8ca67187e5dddee7",
+  "last_checkpoint": "2026-08-02T00:30:41Z",
+  "last_known_git_commit": "PENDING_COMMIT",
   "publication_allowed": false,
   "compute_policy": "local CPU/local GPU only; no HF cpu-upgrade, Jobs, paid, or remote compute",
-  "github_repository": "https://github.com/MachineLearning-Nerd/icml26-repro-Yhv4d8wfbi-probably-approximately-correct-labels"
+  "github_repository": "https://github.com/MachineLearning-Nerd/icml26-repro-Yhv4d8wfbi-probably-approximately-correct-labels",
+  "claim_1_outcome": {
+    "verdict": "toy",
+    "scope": "five-seed clean-room finite synthetic binary proxy-label experiment with held-out Hoeffding-UCB calibration; not an independent Theorem 2.1 proof",
+    "evidence": [
+      "outputs/claim1_proxy_label_calibration/results.csv",
+      "outputs/claim1_proxy_label_calibration/summary.json",
+      "logbook/claim-1.md"
+    ],
+    "negative_control": "threshold +0.70 routes fewer cases to expert and exceeds epsilon in all five finite populations"
+  }
 }

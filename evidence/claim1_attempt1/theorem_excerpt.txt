@@ -1,0 +1,15 @@
+   304	to produce a labeled dataset with small error.
+   305	PAC labeling yields guarantees similar in flavor to that of its namesake in
+   306	probably approximately correct (PAC) learning \citep{valiant1984theory}: given 
+   307	user-specified constants $\epsilon, \alpha > 0$, our procedure results in a labeled dataset
+   308	with error at most $\epsilon$, with
+   309	probability at least~$1-\alpha$. This guarantee is \emph{nonasymptotic} under minimal assumptions on the dataset or the predicted labels being used.
+   310	
+   311	\subsection{Contributions}
+   312	
+   313	We give a brief overview of our contributions, beginning with the problem setup. Given an unlabeled dataset $X_1,\dots,X_n \in \mathcal X$, with unknown expert labels $Y_1,\dots,Y_n$, our goal is to return a labeled dataset $(X_1,\tilde Y_1),\dots,(X_n,\tilde Y_n)$, such that we incur only a small amount of labeling errors:
+   314	\begin{equation}
+   315	\label{eq:labeling_guarantee}
+   316	\frac{1}{n} \sum_{i=1}^n \ell(Y_i,\tilde Y_i)\leq\epsilon, \text{ with probability } 1-\alpha.
+   317	\end{equation}
+   318	Here, $\alpha$ and $\epsilon$ are user-chosen error parameters and $\ell$ is a relevant error metric. For example, if we want categorical labels to be accurate, we can choose the 0-1 loss: $\ell(Y_i, \tilde Y_i) = \mathbf{1}\{Y_i \neq \tilde Y_i\}$. The guarantee \eqref{eq:labeling_guarantee} then requires that at most an $\epsilon$-fraction of the dataset is mislabeled, with high probability. In regression problems, one might choose the squared loss, $\ell(Y_i,\tilde Y_i) = (Y_i - \tilde Y_i)^2$. We call $\tilde Y_i$ that satisfy the criterion \eqref{eq:labeling_guarantee} \emph{probably approximately correct} (PAC) labels.
