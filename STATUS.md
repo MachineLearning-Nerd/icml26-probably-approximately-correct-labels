@@ -14,7 +14,7 @@ Target GitHub repository: https://github.com/MachineLearning-Nerd/icml26-probabl
 Canonical branch: main
 
 Current phase: claim_1_attempt_1_local_proxy_label_toy_complete
-Publication status: normalized GitHub repository publication is in progress; stale master cleanup is pending
+Publication status: normalized GitHub repository published and live-verified; stale master branch removed
 Compute policy: local CPU and local GPU only; no Hugging Face, Jobs, paid, or remote compute
 
 Source pins:
