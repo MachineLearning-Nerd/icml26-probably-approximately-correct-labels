@@ -1,15 +1,18 @@
 {
   "schema_version": 1,
+  "paper": "arXiv:2506.10908",
   "openreview_id": "Yhv4d8wfbi",
   "phase": "claim_1_attempt_1_local_proxy_label_toy_complete",
-  "next_action": "independent_claim_1_toy_review_then_claim_2",
+  "next_action": "select_next_repository_from_collection_tracker",
   "active_run_ids": [],
   "completed_milestones": [
     "live_duplicate_gate",
     "live_contract_saved",
     "source_archive_and_pdf_pinned",
     "claim_1_source_cpu_feasibility_audit",
-    "claim_1_attempt_1_calibrated_proxy_label_local_toy"
+    "claim_1_attempt_1_calibrated_proxy_label_local_toy",
+    "claim_ledger_written",
+    "branch_audit_written"
   ],
   "failed_attempts": [],
   "claim_attempt_counts": {
@@ -19,11 +22,22 @@
     "4": 0,
     "5": 0
   },
-  "last_checkpoint": "2026-08-02T00:30:41Z",
-  "last_known_git_commit": "PENDING_COMMIT",
+  "last_checkpoint": "2026-08-13T00:00:00Z",
+  "last_known_git_commit": "749cbfcdf5e3ba0c838782f112f3b836c6e3ffac",
   "publication_allowed": false,
-  "compute_policy": "local CPU/local GPU only; no HF cpu-upgrade, Jobs, paid, or remote compute",
-  "github_repository": "https://github.com/MachineLearning-Nerd/icml26-repro-Yhv4d8wfbi-probably-approximately-correct-labels",
+  "compute_policy": "local CPU and local GPU only; no Hugging Face, Jobs, paid, or remote compute",
+  "former_repository": "icml26-repro-Yhv4d8wfbi-probably-approximately-correct-labels",
+  "target_repository": "icml26-probably-approximately-correct-labels",
+  "github_repository": "https://github.com/MachineLearning-Nerd/icml26-probably-approximately-correct-labels",
+  "canonical_branch": "main",
+  "historical_remote_branch_count": 1,
+  "claim_statuses": {
+    "1": "TOY_FINITE_AUDIT",
+    "2": "UNSTARTED",
+    "3": "UNSTARTED",
+    "4": "UNSTARTED",
+    "5": "UNSTARTED"
+  },
   "claim_1_outcome": {
     "verdict": "toy",
     "scope": "five-seed clean-room finite synthetic binary proxy-label experiment with held-out Hoeffding-UCB calibration; not an independent Theorem 2.1 proof",
@@ -32,6 +46,6 @@
       "outputs/claim1_proxy_label_calibration/summary.json",
       "logbook/claim-1.md"
     ],
-    "negative_control": "threshold +0.70 routes fewer cases to expert and exceeds epsilon in all five finite populations"
+    "negative_control": "threshold plus 0.70 routes fewer cases to expert and exceeds epsilon in all five finite populations"
   }
 }
