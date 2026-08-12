@@ -25,7 +25,7 @@
     "5": 0
   },
   "last_checkpoint": "2026-08-13T00:00:00Z",
-  "last_known_git_commit": "a8774c839d856684cd762b47a9b08acea185786c",
+  "last_known_git_commit": "60b1b1e",
   "publication_allowed": false,
   "compute_policy": "local CPU and local GPU only; no Hugging Face, Jobs, paid, or remote compute",
   "former_repository": "icml26-repro-Yhv4d8wfbi-probably-approximately-correct-labels",
