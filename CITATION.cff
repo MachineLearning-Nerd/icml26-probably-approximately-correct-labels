@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: "Probably Approximately Correct Labels — ICML 2026 partial reproduction audit"
+message: "If you use this audit, please cite the paper and the repository."
+type: software
+authors:
+  - family-names: Candès
+    given-names: "Emmanuel J."
+  - family-names: Ilyas
+    given-names: Andrew
+  - family-names: Zrnic
+    given-names: Tijana
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-probably-approximately-correct-labels"
+repository-artifact: "https://arxiv.org/abs/2506.10908"
+abstract: "Partial claim-by-claim reproduction audit for Probably Approximately Correct Labels. Claim 1 is a reduced synthetic finite audit; Claims 2–5 remain unstarted."
+keywords:
+  - PAC labels
+  - uncertainty calibration
+  - model routing
+  - reproducibility
+  - ICML 2026
+preferred-citation:
+  type: article
+  title: "Probably Approximately Correct Labels"
+  authors:
+    - family-names: Candès
+      given-names: "Emmanuel J."
+    - family-names: Ilyas
+      given-names: Andrew
+    - family-names: Zrnic
+      given-names: Tijana
+  year: 2025
+  journal: "arXiv preprint arXiv:2506.10908"
+  doi: "10.48550/arXiv.2506.10908"

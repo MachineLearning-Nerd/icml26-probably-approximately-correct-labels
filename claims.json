@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "paper": "arXiv:2506.10908",
+  "openreview_id": "Yhv4d8wfbi",
+  "repository": "MachineLearning-Nerd/icml26-probably-approximately-correct-labels",
+  "claims": [
+    {
+      "id": "C1",
+      "paper_anchor": "Theorem 2.1",
+      "status": "TOY_FINITE_AUDIT",
+      "scope": "five-seed finite synthetic binary proxy-label calibration fixture",
+      "producer": ["src/claim1_proxy_label_calibration.py"],
+      "evidence": [
+        "outputs/claim1_proxy_label_calibration/summary.json",
+        "outputs/claim1_proxy_label_calibration/results.csv",
+        "outputs/claim1_proxy_label_calibration/config.json",
+        "outputs/claim1_proxy_label_calibration/SHA256SUMS"
+      ],
+      "headline": "All five calibrated finite populations meet epsilon; all five under-calibrated controls fail."
+    },
+    {
+      "id": "C2",
+      "paper_anchor": "Section 2.1",
+      "status": "UNSTARTED",
+      "scope": "uncertainty multicalibration across groups and bins",
+      "producer": [],
+      "evidence": [],
+      "headline": "No subgroup calibration audit is present."
+    },
+    {
+      "id": "C3",
+      "paper_anchor": "Section 3",
+      "status": "UNSTARTED",
+      "scope": "PAC router among candidate models",
+      "producer": [],
+      "evidence": [],
+      "headline": "No router reconstruction or hard-routing evaluation is present."
+    },
+    {
+      "id": "C4",
+      "paper_anchor": "Benchmark tables",
+      "status": "UNSTARTED",
+      "scope": "single-model expert-label savings",
+      "producer": [],
+      "evidence": [],
+      "headline": "No text, image, continuous-label, or protein benchmark is reproduced."
+    },
+    {
+      "id": "C5",
+      "paper_anchor": "Router benchmark",
+      "status": "UNSTARTED",
+      "scope": "GPT-4o and Claude 3.7 routing savings",
+      "producer": [],
+      "evidence": [],
+      "headline": "No multi-model budget or cost result is claimed."
+    }
+  ]
+}

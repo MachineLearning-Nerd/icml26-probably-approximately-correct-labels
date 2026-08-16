@@ -13,8 +13,8 @@ Former GitHub repository: https://github.com/MachineLearning-Nerd/icml26-repro-Y
 Target GitHub repository: https://github.com/MachineLearning-Nerd/icml26-probably-approximately-correct-labels
 Canonical branch: main
 
-Current phase: claim_1_attempt_1_local_proxy_label_toy_complete
-Publication status: normalized GitHub repository published and live-verified; stale master branch removed
+Current phase: claim_1_attempt_1_local_proxy_label_toy_complete_with_standardized_dossier
+Publication status: normalized GitHub repository with standardized dossier; stale master branch removed
 Compute policy: local CPU and local GPU only; no Hugging Face, Jobs, paid, or remote compute
 
 Source pins:
@@ -26,8 +26,9 @@ Source pins:
 
 Official code/data status:
 
-- No executable author release is present in the pinned source archive.
-- No complete model, dataset, prompt, expert-label, or benchmark-output pin is available in this workspace.
+- No code is present in the pinned arXiv source archive.
+- The official author implementation is https://github.com/tijana-zrnic/pac-labels, observed at b415b58756b14b384529ac9cf146bd5d4c8139aa on 2026-08-17.
+- No official checkout together with complete model, dataset, prompt, expert-label, or benchmark-output pins is available in this workspace.
 - The current implementation is independent clean-room audit code.
 
 Claim status:
@@ -38,4 +39,4 @@ Claim status:
 - Claim 4 / single-model benchmark savings: UNSTARTED
 - Claim 5 / multi-model router savings: UNSTARTED
 
-The normalized repository will preserve the source snapshot and finite toy evidence while clearly separating it from the missing benchmark assets and theorem-level verification.
+The normalized repository preserves the source snapshot and finite toy evidence while clearly separating them from the official implementation and the missing benchmark assets and theorem-level verification. The standardized dossier records the claim producers, evidence paths, branch inventory, citation, and author acknowledgement.

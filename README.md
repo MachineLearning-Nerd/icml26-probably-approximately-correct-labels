@@ -20,9 +20,25 @@ This repository studies how to combine cheap model predictions with expensive ex
 | Pinned PDF SHA-256 | 39a7b844fc0f252a054fe4c106bd3a382f0b5636f042380543893aa055608181 |
 | Current repository | [MachineLearning-Nerd/icml26-probably-approximately-correct-labels](https://github.com/MachineLearning-Nerd/icml26-probably-approximately-correct-labels) |
 | Former repository name | icml26-repro-Yhv4d8wfbi-probably-approximately-correct-labels |
+| Official author code | [tijana-zrnic/pac-labels](https://github.com/tijana-zrnic/pac-labels) at b415b58756b14b384529ac9cf146bd5d4c8139aa (observed 2026-08-17) |
 | Canonical branch | main |
 
-The pinned source archive contains the paper source and figures but no executable author release. The benchmark claims depend on GPT-4o, Claude 3.7 Sonnet, ResNet-152, AlphaFold, and task-specific data or expert labels; no complete author code/data/model pin is available in this workspace. The current scripts are independent clean-room audit code.
+The pinned arXiv source archive contains the paper source and figures but no code. The authors publish a separate official implementation in tijana-zrnic/pac-labels, which contains calibration and router notebooks, utilities, example datasets, and requirements. This audit does not execute that repository or claim that its model outputs, expert labels, prompts, or benchmark artifacts are pinned here. The current Claim 1 scripts are independent clean-room audit code.
+
+## Standardized audit dossier
+
+| File | Purpose |
+| --- | --- |
+| [CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md) | Claim-by-claim producers, evidence paths, statuses, and boundaries |
+| [SOURCE_AUDIT.md](SOURCE_AUDIT.md) | Paper identity, source pins, and official implementation provenance |
+| [BRANCH_AUDIT.md](BRANCH_AUDIT.md) | Final branch inventory and stale-branch disposition |
+| [ENVIRONMENT.md](ENVIRONMENT.md) | Reproduction command and run provenance |
+| [REPORT.md](REPORT.md) | Concise partial-audit conclusion and limitations |
+| [CITATION.cff](CITATION.cff) | Machine-readable citation for this audit |
+| [AUTHOR_THANK_YOU.md](AUTHOR_THANK_YOU.md) | Thank-you note to the paper authors |
+| [claims.json](claims.json) | Machine-readable claim ledger |
+| [EVIDENCE_MANIFEST.json](EVIDENCE_MANIFEST.json) | Selected content hashes and required audit files |
+| [verify_final.py](verify_final.py) | Fail-closed local publication verifier |
 
 ## What the paper is doing
 
@@ -107,12 +123,22 @@ The retained run uses only the Python standard library. This collection cleanup 
 | tests/ | Contract and Claim 1 tests |
 | logbook/claim-1.md | Human-readable Claim 1 result |
 | branch-audit.md | Branch inventory and cleanup decision |
+| CLAIM_EVIDENCE.md | Standardized claim-to-evidence ledger |
+| SOURCE_AUDIT.md | Standardized paper and source audit |
+| BRANCH_AUDIT.md | Standardized final branch audit |
+| ENVIRONMENT.md | Standardized run provenance |
+| REPORT.md | Standardized partial reproduction report |
+| CITATION.cff | Machine-readable paper and repository citation |
+| AUTHOR_THANK_YOU.md | Author acknowledgement |
+| claims.json | Machine-readable claim statuses |
+| EVIDENCE_MANIFEST.json | Content-addressed evidence manifest |
+| verify_final.py | Final-state verifier |
 | STATUS.md | Current paper, claim, and publication status |
 | AUTONOMOUS_STATE.json | Machine-readable continuation state |
 
 ## Branch policy
 
-The normalized public repository uses one stable branch: main. Before cleanup, main contained the current Claim 1 toy evidence while master was the older default branch without that evidence. The branch inventory and deletion decision are recorded in branch-audit.md.
+The normalized public repository uses one stable branch: main. Before cleanup, main contained the current Claim 1 toy evidence while master was the older default branch without that evidence. The branch inventory and deletion decision are recorded in branch-audit.md and BRANCH_AUDIT.md.
 
 ## Citation
 
@@ -136,4 +162,4 @@ Thank you to Emmanuel J. Candès, Andrew Ilyas, and Tijana Zrnic for developing 
 - Claim 1 is not an independent proof of Theorem 2.1.
 - Claims 2–5 are not reproduced in the current checkpoint.
 - No exact GPT-4o, Claude 3.7, ResNet-152, AlphaFold, dataset, expert-label, or benchmark artifact is pinned here.
-- The source archive is retained for paper-level inspection, not as executable author code.
+- The source archive is retained for paper-level inspection; the separate official code release is recorded in SOURCE_AUDIT.md but is not executed by this audit.

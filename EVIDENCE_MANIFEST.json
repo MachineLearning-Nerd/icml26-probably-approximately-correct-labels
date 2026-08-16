@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-probably-approximately-correct-labels",
+  "source": {
+    "paper": "https://arxiv.org/abs/2506.10908",
+    "openreview": "https://openreview.net/forum?id=Yhv4d8wfbi",
+    "official_code": "https://github.com/tijana-zrnic/pac-labels",
+    "official_code_observed_main": "b415b58756b14b384529ac9cf146bd5d4c8139aa",
+    "archive_sha256": "0d4ea33f63c846648d01c8d597cd0564f3d7331982cb04e8c3801051fa296bd5",
+    "pdf_sha256": "39a7b844fc0f252a054fe4c106bd3a382f0b5636f042380543893aa055608181"
+  },
+  "required_audit_files": [
+    "README.md",
+    "STATUS.md",
+    "AUTONOMOUS_STATE.json",
+    "branch-audit.md",
+    "CLAIM_EVIDENCE.md",
+    "SOURCE_AUDIT.md",
+    "BRANCH_AUDIT.md",
+    "ENVIRONMENT.md",
+    "REPORT.md",
+    "AUTHOR_THANK_YOU.md",
+    "CITATION.cff",
+    "claims.json",
+    "EVIDENCE_MANIFEST.json",
+    "verify_final.py"
+  ],
+  "claim_statuses": {
+    "C1": "TOY_FINITE_AUDIT",
+    "C2": "UNSTARTED",
+    "C3": "UNSTARTED",
+    "C4": "UNSTARTED",
+    "C5": "UNSTARTED"
+  },
+  "content_addressed_artifacts": [
+    {"path": "contract/live_claims.json", "sha256": "fde18e778832ab299fea85a5bcaecfc9943fd98f662bb900b255e09a04b59aa4"},
+    {"path": "contract/contract_manifest.json", "sha256": "2d35608d5efc4d673c8cf6de67dce196fea08319b526cf175ba4426516f84839"},
+    {"path": "evidence/source/arxiv_source.tar.gz", "sha256": "0d4ea33f63c846648d01c8d597cd0564f3d7331982cb04e8c3801051fa296bd5"},
+    {"path": "evidence/source/paper.pdf", "sha256": "39a7b844fc0f252a054fe4c106bd3a382f0b5636f042380543893aa055608181"},
+    {"path": "evidence/claim1_attempt1/theorem_excerpt.txt", "sha256": "3960083dc8f98f7780329b6862d2917a606ea693756e257804659f2d128424c4"},
+    {"path": "evidence/claim1_attempt1/SHA256SUMS", "sha256": "354c02a9a3d13623000db06c7a031e826bd48261fc20e7c1bc5c2dcceae8bc71"},
+    {"path": "src/claim1_proxy_label_calibration.py", "sha256": "4d87fb0bca2b462133cea1e42945cdc426da77f38489d8b949ca8483a6e76284"},
+    {"path": "src/claim1_protocol.md", "sha256": "ccb49cd7e5a8621ecccfa39182d8e8c2b8dfa7845a4772cf0965d8ebacb6311e"},
+    {"path": "outputs/claim1_proxy_label_calibration/config.json", "sha256": "a5cd269765ba1c5f44a0d4a521fbcfa3343f15a294c518549bc24b1ca5031e6f"},
+    {"path": "outputs/claim1_proxy_label_calibration/results.csv", "sha256": "59fc3d063d9a55b5db631f43eccd3f9259baa633cbf6bb026696d003f1a36e56"},
+    {"path": "outputs/claim1_proxy_label_calibration/summary.json", "sha256": "77b11c2750aad0c6319a58eafdb02ba741d08988255011174c329333d5955e09"},
+    {"path": "outputs/claim1_proxy_label_calibration/SHA256SUMS", "sha256": "db145260eb05320562b490786d0a78135c2fc7bb8c2540ac0c655597e5224c38"}
+  ]
+}
