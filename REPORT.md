@@ -2,6 +2,10 @@
 
 ## Conclusion
 
+Machine-readable overall verdict: `PARTIAL_CLAIM_1_TOY_CLAIMS_2_TO_5_UNSTARTED`.
+`publication_allowed=false`, `score_claim=false`, and
+`official_author_endorsement=false`.
+
 The current evidence supports one narrow qualitative result: a held-out uncertainty threshold selected on a synthetic binary calibration sample produces proxy labels whose realized error is at most `epsilon=0.05` in all five retained finite populations. The result is labeled `TOY_FINITE_AUDIT`.
 
 Claims 2–5 are not reproduced. The repository does not claim the paper's multicalibration result, PAC-router result, GPT-4o/Claude savings, ResNet-152 savings, continuous-label savings, or AlphaFold result.

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-probably-approximately-correct-labels",
+  "paper": {
+    "title": "Probably Approximately Correct Labels",
+    "authors": [
+      "Emmanuel J. Candès",
+      "Andrew Ilyas",
+      "Tijana Zrnic"
+    ],
+    "arxiv": "2506.10908",
+    "openreview_id": "Yhv4d8wfbi"
+  },
+  "overall_verdict": "PARTIAL_CLAIM_1_TOY_CLAIMS_2_TO_5_UNSTARTED",
+  "publication_allowed": false,
+  "score_claim": false,
+  "official_author_endorsement": false,
+  "claims": [
+    {
+      "id": "C1",
+      "status": "TOY_FINITE_AUDIT",
+      "status_detail": "TOY_FINITE_SYNTHETIC_PROXY_LABEL_CALIBRATION",
+      "claim_boundary": "Five finite synthetic binary populations pass a held-out Hoeffding-UCB calibration check with a threshold-plus-0.70 negative control. This is not a proof of Theorem 2.1 or a distribution-free guarantee.",
+      "producer": [
+        "src/claim1_proxy_label_calibration.py"
+      ],
+      "evidence": [
+        "outputs/claim1_proxy_label_calibration/summary.json",
+        "outputs/claim1_proxy_label_calibration/results.csv"
+      ]
+    },
+    {
+      "id": "C2",
+      "status": "UNSTARTED",
+      "status_detail": "UNSTARTED_MULTICALIBRATION_AUDIT",
+      "claim_boundary": "No group/bin multicalibration correction loop, before/after comparison, or paper-faithful calibration task is present.",
+      "planned_producer": "Reconstruct the paper's group/bin correction loop with pinned calibration groups, bins, tolerance, and splits."
+    },
+    {
+      "id": "C3",
+      "status": "UNSTARTED",
+      "status_detail": "UNSTARTED_PAC_ROUTER_RECONSTRUCTION",
+      "claim_boundary": "No PAC-router reconstruction, sigmoid relaxation, implicit-gradient training, or final hard-routing evaluation is present.",
+      "planned_producer": "Pin model outputs and costs, then audit the differentiable relaxation separately from hard routing."
+    },
+    {
+      "id": "C4",
+      "status": "UNSTARTED",
+      "status_detail": "UNSTARTED_SINGLE_MODEL_BENCHMARKS",
+      "claim_boundary": "No GPT-4o, ResNet-152, continuous-label, protein-folding, dataset, prompt, expert-label, or benchmark-savings claim is reproduced.",
+      "planned_producer": "Pin the exact task assets, model versions, labels, uncertainty definitions, trials, and cost denominator before any benchmark claim."
+    },
+    {
+      "id": "C5",
+      "status": "UNSTARTED",
+      "status_detail": "UNSTARTED_MULTI_MODEL_ROUTER_BENCHMARK",
+      "claim_boundary": "No GPT-4o/Claude routing budget or relative-cost result is reproduced.",
+      "planned_producer": "Pin both model outputs, current costs, routing data, expert labels, and the cost-sensitive evaluation protocol."
+    }
+  ]
+}

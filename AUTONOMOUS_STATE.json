@@ -2,7 +2,7 @@
   "schema_version": 1,
   "paper": "arXiv:2506.10908",
   "openreview_id": "Yhv4d8wfbi",
-  "phase": "claim_1_attempt_1_local_proxy_label_toy_complete_with_standardized_dossier",
+  "phase": "published_partial_audit",
   "next_action": "select_next_repository_from_collection_tracker",
   "active_run_ids": [],
   "completed_milestones": [
@@ -27,9 +27,12 @@
     "4": 0,
     "5": 0
   },
-  "last_checkpoint": "2026-08-17T00:00:00Z",
-  "last_known_git_commit": "fa479e9e7dcbfb9a88606d769fdda6f6f49cef77",
+  "last_checkpoint": "2026-08-19T14:46:00+05:30",
+  "last_known_git_commit": "cb95a8104161402d3055bb37bfc297b4a1958887",
   "publication_allowed": false,
+  "overall_verdict": "PARTIAL_CLAIM_1_TOY_CLAIMS_2_TO_5_UNSTARTED",
+  "score_claim": false,
+  "official_author_endorsement": false,
   "compute_policy": "local CPU and local GPU only; no Hugging Face, Jobs, paid, or remote compute",
   "former_repository": "icml26-repro-Yhv4d8wfbi-probably-approximately-correct-labels",
   "target_repository": "icml26-probably-approximately-correct-labels",
@@ -38,8 +41,8 @@
   "historical_remote_branch_count": 1,
   "canonical_identity": {
     "name": "MachineLearning-Nerd",
-    "email": "37579156+MachineLearning-Nerd@users.noreply.github.com",
-    "verified_reachable_commits": 7
+    "email": "MachineLearning-Nerd@users.noreply.github.com",
+    "verified_reachable_commits": 8
   },
   "official_implementation": {
     "repository": "https://github.com/tijana-zrnic/pac-labels",
@@ -50,6 +53,7 @@
   "audit_dossier": {
     "status": "written",
     "verification_script": "verify_final.py",
+    "reproduction_verdicts": "reproduction_verdicts.json",
     "claim_statuses": {
       "1": "TOY_FINITE_AUDIT",
       "2": "UNSTARTED",

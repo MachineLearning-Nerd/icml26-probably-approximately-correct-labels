@@ -1,6 +1,10 @@
 {
   "schema_version": 1,
   "repository": "MachineLearning-Nerd/icml26-probably-approximately-correct-labels",
+  "overall_verdict": "PARTIAL_CLAIM_1_TOY_CLAIMS_2_TO_5_UNSTARTED",
+  "publication_allowed": false,
+  "score_claim": false,
+  "official_author_endorsement": false,
   "source": {
     "paper": "https://arxiv.org/abs/2506.10908",
     "openreview": "https://openreview.net/forum?id=Yhv4d8wfbi",
@@ -22,6 +26,7 @@
     "AUTHOR_THANK_YOU.md",
     "CITATION.cff",
     "claims.json",
+    "reproduction_verdicts.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py"
   ],
@@ -44,6 +49,12 @@
     {"path": "outputs/claim1_proxy_label_calibration/config.json", "sha256": "a5cd269765ba1c5f44a0d4a521fbcfa3343f15a294c518549bc24b1ca5031e6f"},
     {"path": "outputs/claim1_proxy_label_calibration/results.csv", "sha256": "59fc3d063d9a55b5db631f43eccd3f9259baa633cbf6bb026696d003f1a36e56"},
     {"path": "outputs/claim1_proxy_label_calibration/summary.json", "sha256": "77b11c2750aad0c6319a58eafdb02ba741d08988255011174c329333d5955e09"},
-    {"path": "outputs/claim1_proxy_label_calibration/SHA256SUMS", "sha256": "db145260eb05320562b490786d0a78135c2fc7bb8c2540ac0c655597e5224c38"}
+    {"path": "outputs/claim1_proxy_label_calibration/SHA256SUMS", "sha256": "db145260eb05320562b490786d0a78135c2fc7bb8c2540ac0c655597e5224c38"},
+    {"path": "README.md", "sha256": "c3bc1ec7e2caae4f689d7836a896dcb8d277b8a6339f040354839c92121c0d8a"},
+    {"path": "STATUS.md", "sha256": "5691bbd596edcd1d55761ea2238c555db58564464fd61f5746c5f30f998a0759"},
+    {"path": "REPORT.md", "sha256": "54ece8a0a358e95c1b75b663c12dd37ea27546979e6ea386f6b72a4cbde4d8f2"},
+    {"path": "claims.json", "sha256": "05beb503385209da0f26e68472af14f4f31db4987b2b6fca3aa9c37d2c7d87f1"},
+    {"path": "reproduction_verdicts.json", "sha256": "4eac10d256cdd74bcc7a4bfba43ed96aa755e581cc57bbeede5d4d3eb9444577"},
+    {"path": "AUTONOMOUS_STATE.json", "sha256": "f0276b7e0f14aeebfc773aaad02bd43382c7f630872fc2d2395d70593c27420c"}
   ]
 }

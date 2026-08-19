@@ -13,8 +13,10 @@ Former GitHub repository: https://github.com/MachineLearning-Nerd/icml26-repro-Y
 Target GitHub repository: https://github.com/MachineLearning-Nerd/icml26-probably-approximately-correct-labels
 Canonical branch: main
 
-Current phase: claim_1_attempt_1_local_proxy_label_toy_complete_with_standardized_dossier
-Publication status: normalized GitHub repository with standardized dossier; stale master branch removed
+Current phase: published_partial_audit
+Publication status: standardized partial-audit dossier published; stale master branch removed; Claims 2–5 remain unstarted
+Overall verdict: PARTIAL_CLAIM_1_TOY_CLAIMS_2_TO_5_UNSTARTED
+Publication boundary: publication_allowed=false; score_claim=false; official_author_endorsement=false
 Compute policy: local CPU and local GPU only; no Hugging Face, Jobs, paid, or remote compute
 
 Source pins:
@@ -40,3 +42,5 @@ Claim status:
 - Claim 5 / multi-model router savings: UNSTARTED
 
 The normalized repository preserves the source snapshot and finite toy evidence while clearly separating them from the official implementation and the missing benchmark assets and theorem-level verification. The standardized dossier records the claim producers, evidence paths, branch inventory, citation, and author acknowledgement.
+
+Machine-readable continuation state is in AUTONOMOUS_STATE.json, and the explicit claim-by-claim publication verdict is in reproduction_verdicts.json. This repository does not claim a paper score or official author endorsement.

@@ -12,14 +12,23 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 EXPECTED_REPOSITORY = "MachineLearning-Nerd/icml26-probably-approximately-correct-labels"
 CANONICAL_NAME = "MachineLearning-Nerd"
-CANONICAL_EMAIL = "37579156+MachineLearning-Nerd@users.noreply.github.com"
-EXPECTED_COMMIT_COUNT = 8
+CANONICAL_EMAIL = "MachineLearning-Nerd@users.noreply.github.com"
+EXPECTED_COMMIT_COUNT = 9
+EXPECTED_OVERALL_VERDICT = "PARTIAL_CLAIM_1_TOY_CLAIMS_2_TO_5_UNSTARTED"
 EXPECTED_STATUSES = {
     "C1": "TOY_FINITE_AUDIT",
     "C2": "UNSTARTED",
     "C3": "UNSTARTED",
     "C4": "UNSTARTED",
     "C5": "UNSTARTED",
+}
+EXPECTED_HASHES = {
+    "README.md": "c3bc1ec7e2caae4f689d7836a896dcb8d277b8a6339f040354839c92121c0d8a",
+    "STATUS.md": "5691bbd596edcd1d55761ea2238c555db58564464fd61f5746c5f30f998a0759",
+    "REPORT.md": "54ece8a0a358e95c1b75b663c12dd37ea27546979e6ea386f6b72a4cbde4d8f2",
+    "claims.json": "05beb503385209da0f26e68472af14f4f31db4987b2b6fca3aa9c37d2c7d87f1",
+    "reproduction_verdicts.json": "4eac10d256cdd74bcc7a4bfba43ed96aa755e581cc57bbeede5d4d3eb9444577",
+    "AUTONOMOUS_STATE.json": "f0276b7e0f14aeebfc773aaad02bd43382c7f630872fc2d2395d70593c27420c",
 }
 
 
@@ -67,6 +76,13 @@ def main() -> None:
             failures.append(f"missing audit file: {relative}")
 
     claims = json.loads((ROOT / "claims.json").read_text())
+    if claims.get("repository") != EXPECTED_REPOSITORY:
+        failures.append("claim ledger repository is not canonical")
+    if claims.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+        failures.append("claim ledger overall verdict is not canonical")
+    for field in ("publication_allowed", "score_claim", "official_author_endorsement"):
+        if claims.get(field) is not False:
+            failures.append(f"claim ledger {field} boundary is not false")
     statuses = {claim["id"]: claim["status"] for claim in claims["claims"]}
     if statuses != EXPECTED_STATUSES:
         failures.append(f"unexpected claim statuses: {statuses}")
@@ -85,6 +101,12 @@ def main() -> None:
             failures.append(f"missing evidence artifact: {item['path']}")
         elif sha256(path) != item["sha256"]:
             failures.append(f"evidence hash mismatch: {item['path']}")
+    manifest_hashes = {item["path"]: item["sha256"] for item in manifest["content_addressed_artifacts"]}
+    for relative, expected in EXPECTED_HASHES.items():
+        if manifest_hashes.get(relative) != expected:
+            failures.append(f"manifest hash is not pinned: {relative}")
+        elif sha256(ROOT / relative) != expected:
+            failures.append(f"reader document hash mismatch: {relative}")
 
     source_sums = {}
     for line in (ROOT / "evidence/source/SHA256SUMS").read_text().splitlines():
@@ -104,7 +126,12 @@ def main() -> None:
         "REPORT.md",
         "CITATION.cff",
         "AUTHOR_THANK_YOU.md",
+        "reproduction_verdicts.json",
+        "AUTONOMOUS_STATE.json",
         "verify_final.py",
+        "publication_allowed",
+        "score_claim",
+        "official_author_endorsement",
     ]:
         if marker not in readme:
             failures.append(f"README missing dossier marker: {marker}")
@@ -116,10 +143,29 @@ def main() -> None:
         failures.append("official implementation pin is missing")
 
     state = json.loads((ROOT / "AUTONOMOUS_STATE.json").read_text())
+    if state.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+        failures.append("autonomous state overall verdict is not canonical")
+    for field in ("publication_allowed", "score_claim", "official_author_endorsement"):
+        if state.get(field) is not False:
+            failures.append(f"autonomous state {field} boundary is not false")
+    if state.get("canonical_branch") != "main" or state.get("historical_remote_branch_count") != 1:
+        failures.append("autonomous state branch metadata is not canonical")
     if state.get("canonical_identity", {}).get("email") != CANONICAL_EMAIL:
         failures.append("autonomous state does not record canonical email")
-    if state.get("canonical_identity", {}).get("verified_reachable_commits") != 7:
-        failures.append("autonomous state does not record the seven pre-dossier commits")
+    if state.get("canonical_identity", {}).get("verified_reachable_commits") != 8:
+        failures.append("autonomous state does not record the eight pre-dossier commits")
+
+    reproduction = json.loads((ROOT / "reproduction_verdicts.json").read_text())
+    if reproduction.get("repository") != EXPECTED_REPOSITORY:
+        failures.append("reproduction verdict repository is not canonical")
+    if reproduction.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+        failures.append("reproduction verdict is not canonical")
+    for field in ("publication_allowed", "score_claim", "official_author_endorsement"):
+        if reproduction.get(field) is not False:
+            failures.append(f"reproduction verdict {field} boundary is not false")
+    reproduction_statuses = {claim["id"]: claim["status"] for claim in reproduction["claims"]}
+    if reproduction_statuses != EXPECTED_STATUSES:
+        failures.append(f"unexpected reproduction verdict statuses: {reproduction_statuses}")
 
     result = {
         "passed": not failures,

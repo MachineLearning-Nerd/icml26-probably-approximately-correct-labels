@@ -4,6 +4,8 @@ Independent audit workspace for [Probably Approximately Correct Labels](https://
 
 > Status: partial audit. Claim 1 has a verified finite synthetic proxy-label/calibration fixture labeled TOY. Claims 2–5 are unstarted. No paper-level claim is presented as fully reproduced.
 
+The publication boundary is explicit: `publication_allowed=false`, `score_claim=false`, and `official_author_endorsement=false` because Claims 2–5 are unstarted and Claim 1 is only a finite synthetic proxy-label fixture.
+
 This repository studies how to combine cheap model predictions with expensive expert labels while controlling the average labeling error with high probability. The current evidence checks the routing mechanism on a finite synthetic binary population; it does not reproduce the paper's proprietary-model benchmark results.
 
 ## Paper
@@ -37,8 +39,10 @@ The pinned arXiv source archive contains the paper source and figures but no cod
 | [CITATION.cff](CITATION.cff) | Machine-readable citation for this audit |
 | [AUTHOR_THANK_YOU.md](AUTHOR_THANK_YOU.md) | Thank-you note to the paper authors |
 | [claims.json](claims.json) | Machine-readable claim ledger |
+| [reproduction_verdicts.json](reproduction_verdicts.json) | Machine-readable reproduction verdicts and claim boundaries |
 | [EVIDENCE_MANIFEST.json](EVIDENCE_MANIFEST.json) | Selected content hashes and required audit files |
 | [verify_final.py](verify_final.py) | Fail-closed local publication verifier |
+| [AUTONOMOUS_STATE.json](AUTONOMOUS_STATE.json) | Machine-readable continuation and publication state |
 
 ## What the paper is doing
 
